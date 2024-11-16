@@ -115,7 +115,7 @@
 }
 @media (max-width: 600px) {
   .container {
-    padding: 10px;
+    padding: 12px;
   }
   .banner {
     flex-direction: column;

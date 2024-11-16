@@ -53,3 +53,8 @@
   top: 15px;
   left: 15px;
 }
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
