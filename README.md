@@ -1,34 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Foodista
 
-## Getting Started
+Foodista is a modern food ordering website built using **Next.js** (v13.1.1). This project showcases a fully responsive, server-side rendered application that allows users to browse, filter, and view detailed information about a variety of dishes. The backend is hosted on **Vercel**, providing seamless integration for fetching dynamic content.
 
-First, run the development server:
+## Features
+
+### 🛠 Core Features
+
+- **Menu Display**: Users can view a list of dishes, each represented by a visually appealing card with key details like price, discount, and type of cuisine.
+- **Detailed Pages**: Each dish has a dedicated page providing details like ingredients, preparation methods, and recipes.
+- **Category Filters**: Users can filter foods by difficulty and cooking time through dynamic queries, applied both client- and server-side.
+- **Responsive Design**: The website adapts seamlessly to various screen sizes, offering a great user experience on all devices.
+
+### 💻 Technologies Used
+
+- **Frontend**: Next.js (React framework) with CSS Modules for styling.
+- **Backend**: Hosted API on Vercel, delivering structured JSON data.
+- **Dynamic Routing**: Implemented with `getStaticPaths` and `getStaticProps` for optimized performance.
+- **Server-Side Filtering**: Integrated filters for categories through `getServerSideProps`.
+- **Conventional Commits**: Maintained strict commit message guidelines for clean and understandable version control.
+
+## Demo
+
+You can view the live demo of the project here:
+
+[Foodista Demo](https://foodista-app.vercel.app)
+
+## Installation
+
+To run this project locally, follow these steps:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/matador7495/Foodista-App.git
+
+#Navigate to the project directory
+
+cd foodista
+```
+
+### 2. Install dependencies
+
+Make sure you have Node.js installed, then run the following command:
+
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+
+Create a .env file in the root directory with the following content:
+
+```bash
+BASE_URL=https://foodista-api-iota.vercel.app
+REVALIDATE=10
+```
+
+### 4. Run the application locally
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app should now be running at http://localhost:xxxx.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+foodista/
+├── components/
+│   ├── icons/                  # SVG components for icons
+│   ├── layout/                 # Layout components like Header, Footer, etc.
+│   ├── modules/                # Reusable components like Card, Filters, etc.
+│   ├── templates/              # Page-level components (MenuPage, DetailsPage, etc.)
+├── pages/
+│   ├── menu/                   # Dynamic route for menu items
+│   ├── categories/             # Filters and category-related pages
+│   └── index.js                # Homepage
+├── public/                     # Static assets (images, icons, etc.)
+├── styles/                     # Global styles
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License
 
-## Learn More
+This project is open-source and available under the [MIT License](./LICENSE).
 
-To learn more about Next.js, take a look at the following resources:
+## Acknowledgments
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Inspired by modern food delivery platforms like Uber Eats and Lovefood.
+- Special thanks to **Vercel** for providing seamless deployment solutions.
