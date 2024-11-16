@@ -7,10 +7,10 @@ function Menu({ data }) {
 export default Menu;
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4001/data");
+  const res = await fetch(`${process.env.BASE_URL}/data`);
   const data = await res.json();
   return {
     props: { data },
-    revalidate: 10 // In seconds
+    revalidate: +process.env.REVALIDATE,
   };
 }
